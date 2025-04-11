@@ -2,7 +2,7 @@ from HEAD import *
 
 class Config:
     def __init__(self):
-#########################################################
+######################################################
         # 功能列表
         self.fusion_world = 0           # 核聚变装置展示
         self.data_compare = 0           # 两个文件对比差异
@@ -11,27 +11,27 @@ class Config:
         self.file_extreme = 0           # 单文件极值，使用input_path
         self.path_extreme = 0           # 路径全局极值，使用file_path
         self.ini_plus_per = 1           # 初始值累加
-#########################################################
+######################################################
         # 通用参数
         self.input_path = r"\\192.168.0.42\zhangsiyu_Linux\WD\per_data4.0\per8两周期1k间隔\initial_2D\current0_0th.txt"
         self.file_path = r"\\192.168.0.42\zhangsiyu_Linux\WD\per_data4.0\per8两周期1k间隔\magnetic_br"
         self.output_path = r'C:\Users\Administrator\Desktop\\' 
-#########################################################
+#######################################################
         # 文件对比参数
         self.file1 = r"\\192.168.0.42\zhangsiyu_Linux\WD\per_data4.0\per8两周期1k间隔\initial_2D\current0_0th.txt"
         self.file2 = r"\\192.168.0.42\zhangsiyu_Linux\WD\per_data4.0\per8两周期1k间隔\initial_2D\density_old_0th.txt"
         self.eps_threshold = 0.0001     # 灵敏度阈值
-#########################################################
+#######################################################
         # 缺失文件检查参数
         self.start_file = 1000           # 起始文件编号
         self.end_file = 700000          # 结束文件编号
         self.interval = 1000             # 间隔数
-#########################################################
+#######################################################
         # 初始值累加参数
         self.initial_file = r"\\192.168.0.42\zhangsiyu_Linux\WD\per_data4.0\per8两周期1k间隔\current_jr\001000.txt"
         self.nr, self.nth, self.nz = 129, 8, 321    # 二维模式下只需修改NR和nz
         self.dimension_choice = 3                  # 2D/3D
-#########################################################
+#######################################################
 
 def compare_two_files(file1, file2, eps=0.01):
     with open(file1, 'r') as f:

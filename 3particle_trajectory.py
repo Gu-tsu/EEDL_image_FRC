@@ -1,19 +1,8 @@
-import os
-import glob
-import sys
-import imageio
-import numpy as np
-import matplotlib.cm as cm
-import matplotlib.pyplot as plt
-from matplotlib.ticker import MultipleLocator
-from matplotlib.colors import Normalize
-from mpl_toolkits.mplot3d import Axes3D
-from scipy.interpolate import griddata
-from natsort import natsorted
+from HEAD import *
 
 class Config:
     def __init__(self):
-##################################################################
+######################################################
         # paradigm 参数说明：
         # 0 - 显示单个粒子轨道（静态图）
         # 1 - 显示多个粒子散点（束流静态图）
@@ -42,7 +31,7 @@ class Config:
         self.spot_R = 0.08      # 束斑标靶参考半径
         self.spot_file = r"D:\ZHANGSIYU\M1后_离子空间电荷扩散CARA\结果\1000质子\spot.txt"   # 束斑标靶spot文件路径
         
-##################################################################
+######################################################
 def load_data(filename, x_columns):
     try:
         data = np.loadtxt(filename)
